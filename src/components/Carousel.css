@@ -1,0 +1,8 @@
+/* Adapted React Bits Carousel: one visible slide, responsive width and accessible navigation. */
+.carousel-container{position:relative;overflow:hidden;display:flex;flex-direction:column;min-width:0;max-width:100%;flex:1;padding:0;outline-offset:-2px}
+.carousel-track{display:flex;align-items:stretch;flex:1;min-height:0;cursor:grab;touch-action:pan-y}
+.carousel-track:active{cursor:grabbing}.carousel-item{flex-shrink:0;display:flex;flex-direction:column;transform-style:preserve-3d;backface-visibility:hidden}
+.carousel-navigation{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;margin-top:auto;border-top:1px solid var(--line);flex-shrink:0}
+.carousel-count{font:13px 'DM Mono',monospace;color:var(--text)}.carousel-count span{color:var(--muted)}
+.carousel-indicators{display:flex;gap:5px}.carousel-indicator{width:24px;height:28px;border:0;background:transparent;cursor:pointer;position:relative;padding:0}.carousel-indicator:after{content:'';height:4px;width:15px;background:#48424f;position:absolute;left:4px;top:12px;border-radius:4px}.carousel-indicator.active:after{background:var(--purple)}
+.carousel-arrows{display:flex;gap:7px}.carousel-arrows button{background:#201b29;border:1px solid #38303f;color:#e8e0f5;width:36px;height:36px;border-radius:50%;font-size:20px;cursor:pointer;line-height:1}.carousel-arrows button:hover:not(:disabled){background:#3a2855;border-color:var(--purple)}.carousel-arrows button:disabled{opacity:.28;cursor:default}

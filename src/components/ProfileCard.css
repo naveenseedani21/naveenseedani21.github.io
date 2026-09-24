@@ -1,0 +1,12 @@
+/* ProfileCard pointer/tilt engine from React Bits; portfolio-specific presentation. */
+.pc-card-wrapper{perspective:900px;position:relative;touch-action:pan-y;height:100%;--pointer-x:50%;--pointer-y:50%;--rotate-x:0deg;--rotate-y:0deg}
+.pc-card-shell,.pc-card,.pc-inside{height:100%;width:100%;position:relative}
+.pc-card{transform:rotateX(var(--rotate-y)) rotateY(var(--rotate-x));transition:transform .3s;overflow:hidden;border-radius:17px}
+.pc-inside{overflow:hidden;border-radius:17px;background:#18161e}
+.pc-glare{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:.15;background:radial-gradient(circle at var(--pointer-x) var(--pointer-y),#e4d0ff,transparent 65%);mix-blend-mode:screen}
+.portrait-layout{height:100%;position:relative}.portrait{height:100%;width:100%;object-fit:cover;object-position:50% 27%;display:block}.portrait-shade{position:absolute;inset:0;background:linear-gradient(180deg,#0d0b1500 25%,#0d0b1518 45%,#0d0b15e8 100%)}
+.portrait-location{position:absolute;left:22px;top:20px;font:500 12px 'DM Mono',monospace;letter-spacing:.12em;color:#fff;background:#16141c75;backdrop-filter:blur(9px);padding:6px 9px;border-radius:5px}
+.portrait-copy{position:absolute;left:24px;right:16px;bottom:24px}.portrait-copy h2{font-size:29px;line-height:1.2;letter-spacing:-.05em;margin:7px 0}.portrait-copy p{font-size:14px;color:#e3dde9;margin:0}.portrait-copy .portrait-handle{font:12px 'DM Mono',monospace;color:#d6c3f2}
+@media(prefers-reduced-motion:reduce){.pc-card{transform:none;transition:none}}
+
+.portrait-status{position:absolute;top:20px;right:16px;font-size:12px;color:#fff;background:#221932c4;border:1px solid #ac88d35c;padding:5px 8px;border-radius:20px;backdrop-filter:blur(10px)}
